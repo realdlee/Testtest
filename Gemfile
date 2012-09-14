@@ -5,6 +5,7 @@ gem 'pg'
 gem 'listen', '0.4.7' #included to fix bug in Guard
 gem 'jquery-rails'
 gem "pry"
+gem 'devise'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
