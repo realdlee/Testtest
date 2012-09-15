@@ -17,7 +17,7 @@ end
 group :development, :test do
   gem "rspec-rails", "~> 2.0"
   gem 'jazz_hands'
-  gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
+  gem 'rb-fsevent'
   gem 'guard-rspec'
   gem 'guard-livereload'
 end
