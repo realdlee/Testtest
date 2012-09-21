@@ -1,6 +1,13 @@
 Testtest::Application.routes.draw do
-  devise_for :users
+  devise_for :users, :controllers => { :registrations => 'registrations' }
+  devise_for :users do 
+    #added to fix common bug with Devise (destroy_user_session)
+    get '/users/sign_out' => 'devise/sessions#destroy' 
+  end
 
+
+  resources :deals
+  
   root :to => "pages#home"
 
   # The priority is based upon order of creation:

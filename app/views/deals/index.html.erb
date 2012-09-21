@@ -1,0 +1,7 @@
+<h2>Active Deals</h2>
+<div class="add-deal-button"><%= link_to "Add a deal", new_deal_path %></div>
+<% if !@deals.nil? %>
+  <%= render @deals %>
+<% end %>
+
+<%= debug @deals %>

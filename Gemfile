@@ -4,8 +4,10 @@ gem 'rails', '3.2.7'
 gem 'pg'
 gem 'listen', '0.4.7' #included to fix bug in Guard
 gem 'jquery-rails'
-gem "pry"
+gem 'pry'
 gem 'devise'
+gem 'omniauth-facebook'
+gem 'simple_form'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -17,7 +19,7 @@ end
 group :development, :test do
   gem "rspec-rails", "~> 2.0"
   gem 'jazz_hands'
-  gem 'rb-fsevent'
+  gem 'rb-fsevent'  #removed 'if' statement due to Heroku incompatibility
   gem 'guard-rspec'
   gem 'guard-livereload'
 end

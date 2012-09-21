@@ -1,0 +1,16 @@
+<div class="well">
+  <%= simple_form_for @deal do |f| %>
+    <div class="deal-description"> <%= f.input :description %></div>
+    <%= f.input :expiry, :label => "Deal ends at", :as => :date, :discard_year => true %> 
+
+    <!--<div class="btn-group" data-toggle="buttons-radio">
+      <button type="button" class="btn">Today</button>
+      <button type="button" class="btn">Tomorrow</button>
+      <button type="button" class="btn">In Two Days</button>
+    </div> -->
+    
+    <%= f.input :price, :placeholder => "$" %>
+    <%= f.input :url, :label => "Link" %>
+    <%= f.submit "Post Deal", :class => "btn btn-primary" %>
+  <% end %>
+</div>
